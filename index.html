@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // 🌙 테마 토글
+  // 🌙 다크모드 토글
   const themeToggle = document.getElementById('themeToggle');
   const body = document.body;
   let currentTheme = 'light';
@@ -14,116 +14,33 @@ document.addEventListener('DOMContentLoaded', function() {
       themeToggle.textContent = '🌙';
       currentTheme = 'light';
     }
-
-    body.style.transform = 'scale(0.98)';
-    setTimeout(() => body.style.transform = 'scale(1)', 200);
   });
 
-  // 👤 프로필 이미지 애니메이션 + 파티클
+  // 👤 프로필 이미지 클릭 애니메이션
   const profileImg = document.getElementById('profileImg');
   profileImg.addEventListener('click', function() {
-    this.style.animation = 'fashionPulse 0.8s ease-in-out';
-    createFashionParticles();
-    setTimeout(() => this.style.animation = '', 800);
+    this.style.animation = 'pulse 0.6s ease-in-out';
+    setTimeout(() => this.style.animation = '', 600);
   });
-
-  function createFashionParticles() {
-    const particles = ['✨', '👗', '💄', '👠', '💎', '🌟'];
-    const container = document.querySelector('.profile-image-container');
-    for (let i = 0; i < 8; i++) {
-      const particle = document.createElement('div');
-      particle.textContent = particles[Math.floor(Math.random() * particles.length)];
-      Object.assign(particle.style, {
-        position: 'absolute',
-        fontSize: '1.5rem',
-        pointerEvents: 'none',
-        zIndex: 1000,
-        left: Math.random() * 100 + '%',
-        top: Math.random() * 100 + '%',
-        animation: 'particleFloat 2s ease-out forwards'
-      });
-      container.appendChild(particle);
-      setTimeout(() => particle.remove(), 2000);
-    }
-  }
 
   // 🖊 이름 타이핑 애니메이션
   const nameTitle = document.getElementById('nameTitle');
   const originalText = nameTitle.textContent;
 
-  function fashionTypewriter() {
+  function typewriter() {
     nameTitle.textContent = '';
-    nameTitle.style.borderRight = '3px solid #C8A882';
     let i = 0;
     const typing = setInterval(() => {
       if (i < originalText.length) {
         nameTitle.textContent += originalText.charAt(i);
         i++;
-        nameTitle.style.transform = 'scale(1.02)';
-        setTimeout(() => nameTitle.style.transform = 'scale(1)', 50);
       } else {
         clearInterval(typing);
-        setTimeout(() => nameTitle.style.borderRight = 'none', 500);
       }
     }, 120);
   }
-  setTimeout(fashionTypewriter, 800);
+  setTimeout(typewriter, 500);
 
   // 📊 스킬 바 애니메이션
   const skillBars = document.querySelectorAll('.skill-progress');
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const width = entry.target.getAttribute('data-width');
-        setTimeout(() => entry.target.style.width = width, 300);
-      }
-    });
-  }, { threshold: 0.5 });
-  skillBars.forEach(bar => observer.observe(bar));
-
-  // 🌀 전문 분야 카드 마우스 트래킹
-  const expertiseItems = document.querySelectorAll('.expertise-item');
-  expertiseItems.forEach(item => {
-    item.addEventListener('mousemove', function(e) {
-      const rect = this.getBoundingClientRect();
-      const rotateX = (e.clientY - rect.top - rect.height/2) / 10;
-      const rotateY = (rect.width/2 - (e.clientX - rect.left)) / 10;
-      this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
-    });
-    item.addEventListener('mouseleave', () => {
-      item.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-    });
-  });
-
-  // ✍ About Me 편집 (Ctrl+Enter 저장)
-  const aboutText = document.getElementById('aboutText');
-  const originalAboutText = aboutText.textContent;
-
-  aboutText.addEventListener('dblclick', function() {
-    const currentText = this.textContent;
-    this.innerHTML = `
-      <div style="position: relative;">
-        <textarea style="
-          width: 100%; height: 120px; padding: 20px; 
-          border: 2px solid #C8A882; border-radius: 16px; 
-          font-family: inherit; font-size: inherit;
-          background: rgba(200,168,130,0.05); resize: vertical;
-        ">${currentText}</textarea>
-        <div style="position:absolute; bottom:10px; right:15px;
-          font-size:0.8rem; color:#C8A882;">Ctrl+Enter to save</div>
-      </div>
-    `;
-    const textarea = this.querySelector('textarea');
-    textarea.focus();
-
-    textarea.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter' && e.ctrlKey) {
-        aboutText.textContent = this.value || originalAboutText;
-      }
-    });
-    textarea.addEventListener('blur', function() {
-      aboutText.textContent = this.value || originalAboutText;
-    });
-  });
-});
-
