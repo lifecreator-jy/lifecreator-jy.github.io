@@ -1,628 +1,9 @@
-<div class="fashion-layout">
-  <nav class="fashion-nav">
-    <div class="nav-brand">Portfolio</div>
-    <button class="theme-toggle" id="themeToggle">🌙</button>
-  </nav>
-
-  <header class="fashion-hero">
-    <div class="hero-content">
-      <div class="profile-section">
-        <div class="profile-image-container">
-          <img src="https://via.placeholder.com/200/C8A882/FFFFFF?text=MD" alt="프로필 이미지" id="profileImg">
-          <div class="image-overlay"></div>
-        </div>
-        <div class="profile-info">
-          <h1 class="fashion-name" id="nameTitle">송주영</h1>
-          <p class="fashion-role">Fashion MD · Style Curator</p>
-          <div class="fashion-tags">
-            <span class="tag">#Fashion MD</span>
-            <span class="tag">#Retail MD</span>
-            <span class="tag">#Trend Expert</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main class="fashion-main">
-    <section class="about-section fashion-card">
-      <div class="card-header">
-        <h2>About Me</h2>
-        <div class="decorative-line"></div>
-      </div>
-      <p class="fashion-about" id="aboutText">
-        패션 이커머스 업계에서 5년간 MD로 활동하며 트렌드를 선도하는 브랜드 큐레이션과 
-        상품 기획을 담당하고 있습니다. 글로벌 패션 트렌드 분석부터 브랜드 파트너십까지, 
-        패션의 모든 영역에서 창조적 솔루션을 제공합니다.
-      </p>
-    </section>
-
-    <section class="expertise-section fashion-card">
-      <div class="card-header">
-        <h2>Expertise</h2>
-        <div class="decorative-line"></div>
-      </div>
-      <div class="expertise-grid">
-        <div class="expertise-item">
-          <div class="expertise-icon">👗</div>
-          <h3>Merchandising</h3>
-          <p>상품 기획 · 브랜드 큐레이션<br>시즌 트렌드 분석</p>
-          <div class="skill-bar">
-            <div class="skill-progress" data-width="95%"></div>
-          </div>
-        </div>
-        <div class="expertise-item">
-          <div class="expertise-icon">📊</div>
-          <h3>Market Analysis</h3>
-          <p>패션 시장 분석 · 소비자 인사이트<br>경쟁사 벤치마킹</p>
-          <div class="skill-bar">
-            <div class="skill-progress" data-width="90%"></div>
-          </div>
-        </div>
-        <div class="expertise-item">
-          <div class="expertise-icon">🎨</div>
-          <h3>Visual Direction</h3>
-          <p>브랜드 아이덴티티 · 룩북 기획<br>스타일링 & 포토 디렉션</p>
-          <div class="skill-bar">
-            <div class="skill-progress" data-width="85%"></div>
-          </div>
-        </div>
-        <div class="expertise-item">
-          <div class="expertise-icon">🤝</div>
-          <h3>Brand Partnership</h3>
-          <p>브랜드 협업 · 런칭 전략<br>글로벌 파트너십 관리</p>
-          <div class="skill-bar">
-            <div class="skill-progress" data-width="88%"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="achievements-section fashion-card">
-      <div class="card-header">
-        <h2>Achievements</h2>
-        <div class="decorative-line"></div>
-      </div>
-      <div class="achievements-list">
-        <div class="achievement-item">
-          <div class="achievement-number">150+</div>
-          <div class="achievement-text">브랜드 파트너십</div>
-        </div>
-        <div class="achievement-item">
-          <div class="achievement-number">300%</div>
-          <div class="achievement-text">매출 성장 달성</div>
-        </div>
-        <div class="achievement-item">
-          <div class="achievement-number">25+</div>
-          <div class="achievement-text">성공적 런칭 프로젝트</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact-section fashion-card">
-      <div class="card-header">
-        <h2>Let's Connect</h2>
-        <div class="decorative-line"></div>
-      </div>
-      <div class="fashion-contact">
-        <div class="contact-item">
-          <div class="contact-icon">✉️</div>
-          <div class="contact-details">
-            <span class="contact-label">Email</span>
-            <span class="contact-value">fashion.md@email.com</span>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">📱</div>
-          <div class="contact-details">
-            <span class="contact-label">Mobile</span>
-            <span class="contact-value">010-1234-5678</span>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">💼</div>
-          <div class="contact-details">
-            <span class="contact-label">LinkedIn</span>
-            <span class="contact-value">linkedin.com/in/fashionmd</span>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="fashion-footer">
-    <div class="footer-content">
-      <p>&copy; 2024 Fashion MD Portfolio. Designed with passion for fashion.</p>
-      <div class="footer-social">
-        <span>Follow the trends</span>
-      </div>
-    </div>
-  </footer>
-</div>
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --primary-gold: #C8A882;
-  --accent-rose: #D4A5A5;
-  --deep-charcoal: #2C2C2C;
-  --soft-cream: #F8F6F1;
-  --pure-white: #FFFFFF;
-  --warm-gray: #8A8A8A;
-  --text-dark: #1A1A1A;
-  --shadow-light: 0 4px 20px rgba(200, 168, 130, 0.15);
-  --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.1);
-  --gradient-gold: linear-gradient(135deg, #C8A882, #E2C89C);
-  --gradient-rose: linear-gradient(135deg, #D4A5A5, #E8C4C4);
-}
-
-[data-theme="dark"] {
-  --soft-cream: #1A1A1A;
-  --pure-white: #2C2C2C;
-  --text-dark: #F8F6F1;
-  --warm-gray: #B8B8B8;
-  --shadow-light: 0 4px 20px rgba(200, 168, 130, 0.25);
-  --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.4);
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--soft-cream);
-  color: var(--text-dark);
-  line-height: 1.6;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.fashion-layout {
-  min-height: 100vh;
-  position: relative;
-}
-
-.fashion-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  padding: 20px 40px;
-  background: rgba(248, 246, 241, 0.95);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(200, 168, 130, 0.2);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: all 0.3s ease;
-}
-
-[data-theme="dark"] .fashion-nav {
-  background: rgba(26, 26, 26, 0.95);
-  border-bottom: 1px solid rgba(200, 168, 130, 0.3);
-}
-
-.nav-brand {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  font-weight: 600;
-  background: var(--gradient-gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.theme-toggle {
-  background: var(--gradient-gold);
-  border: none;
-  border-radius: 50px;
-  width: 50px;
-  height: 50px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: var(--shadow-light);
-}
-
-.theme-toggle:hover {
-  transform: scale(1.1);
-  box-shadow: var(--shadow-medium);
-}
-
-.fashion-hero {
-  padding: 120px 40px 80px;
-  background: linear-gradient(135deg, var(--soft-cream) 0%, rgba(200, 168, 130, 0.1) 100%);
-  position: relative;
-  overflow: hidden;
-}
-
-.fashion-hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="%23C8A882" opacity="0.1"/><circle cx="60" cy="40" r="0.5" fill="%23D4A5A5" opacity="0.1"/><circle cx="80" cy="70" r="1.5" fill="%23C8A882" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
-  pointer-events: none;
-}
-
-.hero-content {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.profile-section {
-  display: flex;
-  align-items: center;
-  gap: 60px;
-}
-
-.profile-image-container {
-  position: relative;
-  flex-shrink: 0;
-}
-
-.profile-image-container img {
-  width: 200px;
-  height: 200px;
-  border-radius: 20px;
-  object-fit: cover;
-  box-shadow: var(--shadow-medium);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-}
-
-.image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--gradient-gold);
-  border-radius: 20px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.profile-image-container:hover .image-overlay {
-  opacity: 0.2;
-}
-
-.profile-image-container:hover img {
-  transform: scale(1.05);
-}
-
-.profile-info {
-  flex: 1;
-}
-
-.fashion-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 4rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  background: var(--gradient-gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  line-height: 1.2;
-}
-
-.fashion-role {
-  font-size: 1.5rem;
-  color: var(--warm-gray);
-  margin-bottom: 30px;
-  font-weight: 300;
-  letter-spacing: 1px;
-}
-
-.fashion-tags {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.tag {
-  background: rgba(200, 168, 130, 0.15);
-  padding: 8px 20px;
-  border-radius: 25px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  border: 1px solid rgba(200, 168, 130, 0.3);
-  transition: all 0.3s ease;
-}
-
-.tag:hover {
-  background: var(--gradient-gold);
-  color: white;
-  transform: translateY(-2px);
-}
-
-.fashion-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 40px 80px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.fashion-card {
-  background: var(--pure-white);
-  border-radius: 24px;
-  padding: 50px;
-  box-shadow: var(--shadow-light);
-  border: 1px solid rgba(200, 168, 130, 0.1);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.fashion-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: var(--gradient-gold);
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-
-.fashion-card:hover::before {
-  transform: scaleX(1);
-}
-
-.fashion-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-medium);
-}
-
-.card-header {
-  margin-bottom: 40px;
-  position: relative;
-}
-
-.card-header h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: var(--deep-charcoal);
-  margin-bottom: 15px;
-}
-
-.decorative-line {
-  width: 60px;
-  height: 3px;
-  background: var(--gradient-gold);
-  border-radius: 2px;
-}
-
-.fashion-about {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: var(--warm-gray);
-  font-weight: 400;
-}
-
-.expertise-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.expertise-item {
-  text-align: center;
-  padding: 40px 30px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, rgba(200, 168, 130, 0.05) 0%, rgba(212, 165, 165, 0.05) 100%);
-  border: 1px solid rgba(200, 168, 130, 0.15);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.expertise-item:hover {
-  transform: translateY(-5px);
-  background: var(--gradient-gold);
-  color: white;
-}
-
-.expertise-icon {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  display: block;
-}
-
-.expertise-item h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  font-weight: 600;
-}
-
-.expertise-item p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 25px;
-  opacity: 0.8;
-}
-
-.skill-bar {
-  width: 100%;
-  height: 4px;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-.skill-progress {
-  height: 100%;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 2px;
-  width: 0%;
-  transition: width 1s ease-in-out;
-}
-
-.expertise-item:hover .skill-progress {
-  background: rgba(255, 255, 255, 1);
-}
-
-.achievements-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 40px;
-  text-align: center;
-}
-
-.achievement-item {
-  padding: 20px;
-}
-
-.achievement-number {
-  font-family: 'Playfair Display', serif;
-  font-size: 3.5rem;
-  font-weight: 700;
-  background: var(--gradient-gold);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 10px;
-}
-
-.achievement-text {
-  font-size: 1.1rem;
-  color: var(--warm-gray);
-  font-weight: 500;
-}
-
-.fashion-contact {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  padding: 25px;
-  border-radius: 16px;
-  background: rgba(200, 168, 130, 0.05);
-  border: 1px solid rgba(200, 168, 130, 0.15);
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.contact-item:hover {
-  background: var(--gradient-gold);
-  color: white;
-  transform: translateX(10px);
-}
-
-.contact-icon {
-  font-size: 2rem;
-  width: 60px;
-  text-align: center;
-}
-
-.contact-details {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.contact-label {
-  font-size: 0.9rem;
-  opacity: 0.7;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.contact-value {
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-.fashion-footer {
-  background: var(--deep-charcoal);
-  padding: 40px;
-  margin-top: 60px;
-}
-
-[data-theme="dark"] .fashion-footer {
-  background: #0F0F0F;
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--soft-cream);
-}
-
-.footer-social {
-  font-style: italic;
-  color: var(--primary-gold);
-}
-
-@media (max-width: 768px) {
-  .fashion-nav {
-    padding: 15px 20px;
-  }
-  
-  .fashion-hero {
-    padding: 100px 20px 60px;
-  }
-  
-  .profile-section {
-    flex-direction: column;
-    gap: 30px;
-    text-align: center;
-  }
-  
-  .fashion-name {
-    font-size: 2.5rem;
-  }
-  
-  .fashion-main {
-    padding: 0 20px 60px;
-  }
-  
-  .fashion-card {
-    padding: 30px;
-  }
-  
-  .expertise-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .footer-content {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-}
-
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
-  // 패션 테마 토글 기능
+  // 🌙 테마 토글
   const themeToggle = document.getElementById('themeToggle');
   const body = document.body;
-  
   let currentTheme = 'light';
-  
+
   themeToggle.addEventListener('click', function() {
     if (currentTheme === 'light') {
       body.setAttribute('data-theme', 'dark');
@@ -633,324 +14,116 @@ document.addEventListener('DOMContentLoaded', function() {
       themeToggle.textContent = '🌙';
       currentTheme = 'light';
     }
-    
-    // 테마 변경 시 부드러운 전환 효과
+
     body.style.transform = 'scale(0.98)';
-    setTimeout(() => {
-      body.style.transform = 'scale(1)';
-    }, 200);
+    setTimeout(() => body.style.transform = 'scale(1)', 200);
   });
 
-  // 프로필 이미지 패션 애니메이션
+  // 👤 프로필 이미지 애니메이션 + 파티클
   const profileImg = document.getElementById('profileImg');
   profileImg.addEventListener('click', function() {
     this.style.animation = 'fashionPulse 0.8s ease-in-out';
-    
-    // 배경 파티클 효과
     createFashionParticles();
-    
-    setTimeout(() => {
-      this.style.animation = '';
-    }, 800);
+    setTimeout(() => this.style.animation = '', 800);
   });
 
-  // 패션 파티클 생성 함수
   function createFashionParticles() {
     const particles = ['✨', '👗', '💄', '👠', '💎', '🌟'];
     const container = document.querySelector('.profile-image-container');
-    
     for (let i = 0; i < 8; i++) {
       const particle = document.createElement('div');
       particle.textContent = particles[Math.floor(Math.random() * particles.length)];
-      particle.style.position = 'absolute';
-      particle.style.fontSize = '1.5rem';
-      particle.style.pointerEvents = 'none';
-      particle.style.zIndex = '1000';
-      particle.style.left = Math.random() * 100 + '%';
-      particle.style.top = Math.random() * 100 + '%';
-      particle.style.animation = 'particleFloat 2s ease-out forwards';
-      
+      Object.assign(particle.style, {
+        position: 'absolute',
+        fontSize: '1.5rem',
+        pointerEvents: 'none',
+        zIndex: 1000,
+        left: Math.random() * 100 + '%',
+        top: Math.random() * 100 + '%',
+        animation: 'particleFloat 2s ease-out forwards'
+      });
       container.appendChild(particle);
-      
-      setTimeout(() => {
-        particle.remove();
-      }, 2000);
+      setTimeout(() => particle.remove(), 2000);
     }
   }
 
-  // 이름 타이핑 애니메이션 (패션스럽게 개선)
+  // 🖊 이름 타이핑 애니메이션
   const nameTitle = document.getElementById('nameTitle');
   const originalText = nameTitle.textContent;
-  
+
   function fashionTypewriter() {
     nameTitle.textContent = '';
     nameTitle.style.borderRight = '3px solid #C8A882';
     let i = 0;
-    
     const typing = setInterval(() => {
       if (i < originalText.length) {
         nameTitle.textContent += originalText.charAt(i);
         i++;
-        
-        // 타이핑 사운드 시뮬레이션 (시각적 효과)
         nameTitle.style.transform = 'scale(1.02)';
-        setTimeout(() => {
-          nameTitle.style.transform = 'scale(1)';
-        }, 50);
+        setTimeout(() => nameTitle.style.transform = 'scale(1)', 50);
       } else {
         clearInterval(typing);
-        setTimeout(() => {
-          nameTitle.style.borderRight = 'none';
-        }, 500);
+        setTimeout(() => nameTitle.style.borderRight = 'none', 500);
       }
     }, 120);
   }
-
   setTimeout(fashionTypewriter, 800);
 
-  // 전문 분야 스킬 바 애니메이션
+  // 📊 스킬 바 애니메이션
   const skillBars = document.querySelectorAll('.skill-progress');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const width = entry.target.getAttribute('data-width');
-        setTimeout(() => {
-          entry.target.style.width = width;
-        }, 300);
+        setTimeout(() => entry.target.style.width = width, 300);
       }
     });
   }, { threshold: 0.5 });
-
   skillBars.forEach(bar => observer.observe(bar));
 
-  // 전문 분야 카드 마우스 트래킹 효과
+  // 🌀 전문 분야 카드 마우스 트래킹
   const expertiseItems = document.querySelectorAll('.expertise-item');
   expertiseItems.forEach(item => {
     item.addEventListener('mousemove', function(e) {
       const rect = this.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      
-      const rotateX = (y - centerY) / 10;
-      const rotateY = (centerX - x) / 10;
-      
+      const rotateX = (e.clientY - rect.top - rect.height/2) / 10;
+      const rotateY = (rect.width/2 - (e.clientX - rect.left)) / 10;
       this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
     });
-    
-    item.addEventListener('mouseleave', function() {
-      this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+    item.addEventListener('mouseleave', () => {
+      item.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
     });
   });
 
-  // About Me 섹션 편집 기능 (패션 스타일)
+  // ✍ About Me 편집 (Ctrl+Enter 저장)
   const aboutText = document.getElementById('aboutText');
   const originalAboutText = aboutText.textContent;
-  
+
   aboutText.addEventListener('dblclick', function() {
     const currentText = this.textContent;
     this.innerHTML = `
       <div style="position: relative;">
         <textarea style="
-          width: 100%; 
-          height: 120px; 
-          padding: 20px; 
-          border: 2px solid #C8A882; 
-          border-radius: 16px; 
-          font-family: inherit; 
-          font-size: inherit; 
-          background: rgba(200, 168, 130, 0.05);
-          resize: vertical;
-          outline: none;
-          transition: all 0.3s ease;
+          width: 100%; height: 120px; padding: 20px; 
+          border: 2px solid #C8A882; border-radius: 16px; 
+          font-family: inherit; font-size: inherit;
+          background: rgba(200,168,130,0.05); resize: vertical;
         ">${currentText}</textarea>
-        <div style="
-          position: absolute;
-          bottom: 10px;
-          right: 15px;
-          font-size: 0.8rem;
-          color: #C8A882;
-          pointer-events: none;
-        ">Ctrl+Enter to save</div>
+        <div style="position:absolute; bottom:10px; right:15px;
+          font-size:0.8rem; color:#C8A882;">Ctrl+Enter to save</div>
       </div>
     `;
-    
     const textarea = this.querySelector('textarea');
     textarea.focus();
-    
-    // 포커스 시 스타일 변경
-    textarea.addEventListener('focus', function() {
-      this.style.borderColor = '#D4A5A5';
-      this.style.boxShadow = '0 0 0 4px rgba(200, 168, 130, 0.1)';
-    });
-    
-    texdocument.addEventListener('DOMContentLoaded', function() {
-  // 테마 토글 기능
-  const themeToggle = document.getElementById('themeToggle');
-  const body = document.body;
-  
-  // 저장된 테마 불러오기 (localStorage가 아닌 변수로 관리)
-  let currentTheme = 'light';
-  
-  themeToggle.addEventListener('click', function() {
-    if (currentTheme === 'light') {
-      body.setAttribute('data-theme', 'dark');
-      themeToggle.textContent = '☀️';
-      currentTheme = 'dark';
-    } else {
-      body.removeAttribute('data-theme');
-      themeToggle.textContent = '🌙';
-      currentTheme = 'light';
-    }
-  });
 
-  // 프로필 이미지 클릭 시 애니메이션
-  const profileImg = document.getElementById('profileImg');
-  profileImg.addEventListener('click', function() {
-    this.style.animation = 'bounce 0.6s ease-in-out';
-    setTimeout(() => {
-      this.style.animation = '';
-    }, 600);
-  });
-
-  // 이름 타이핑 애니메이션
-  const nameTitle = document.getElementById('nameTitle');
-  const originalText = nameTitle.textContent;
-  
-  function typewriterEffect() {
-    nameTitle.textContent = '';
-    let i = 0;
-    const typing = setInterval(() => {
-      if (i < originalText.length) {
-        nameTitle.textContent += originalText.charAt(i);
-        i++;
-      } else {
-        clearInterval(typing);
+    textarea.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && e.ctrlKey) {
+        aboutText.textContent = this.value || originalAboutText;
       }
-    }, 150);
-  }
-
-  // 페이지 로드 후 타이핑 애니메이션 실행
-  setTimeout(typewriterEffect, 500);
-
-  // 스킬 섹션 호버 효과
-  const skillItems = document.querySelectorAll('.skill-item');
-  skillItems.forEach(item => {
-    item.addEventListener('mouseenter', function() {
-      this.style.background = 'linear-gradient(45deg, #4A90E2, #5ba0f2)';
-      this.style.color = 'white';
-      this.style.transform = 'scale(1.05) rotate(2deg)';
     });
-    
-    item.addEventListener('mouseleave', function() {
-      this.style.background = '';
-      this.style.color = '';
-      this.style.transform = '';
-    });
-  });
-
-  // About 텍스트 클릭 시 편집 가능
-  const aboutText = document.getElementById('aboutText');
-  const originalAboutText = aboutText.textContent;
-  
-  aboutText.addEventListener('dblclick', function() {
-    const currentText = this.textContent;
-    this.innerHTML = `<textarea style="width: 100%; height: 100px; padding: 10px; border: 2px solid #4A90E2; border-radius: 8px; font-family: inherit; font-size: inherit; resize: vertical;">${currentText}</textarea>`;
-    
-    const textarea = this.querySelector('textarea');
-    textarea.focus();
-    
     textarea.addEventListener('blur', function() {
       aboutText.textContent = this.value || originalAboutText;
     });
-    
-    textarea.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter' && e.ctrlKey) {
-        this.blur();
-      }
-    });
-  });
-
-  // 연락처 정보 클릭 시 복사 기능
-  const contactItems = document.querySelectorAll('.contact-item');
-  contactItems.forEach(item => {
-    item.addEventListener('click', function() {
-      const text = this.textContent.trim();
-      // 실제 복사 기능은 보안상 제한이 있으므로 시각적 피드백만 제공
-      this.style.background = '#4A90E2';
-      this.style.color = 'white';
-      this.style.padding = '10px';
-      this.style.borderRadius = '8px';
-      this.style.transform = 'scale(1.05)';
-      
-      setTimeout(() => {
-        this.style.background = '';
-        this.style.color = '';
-        this.style.padding = '';
-        this.style.borderRadius = '';
-        this.style.transform = '';
-      }, 1000);
-    });
-  });
-
-  // 스크롤 시 섹션 애니메이션
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, observerOptions);
-
-  // 초기 상태 설정 및 관찰자 등록
-  const sections = document.querySelectorAll('section');
-  sections.forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(30px)';
-    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(section);
-  });
-
-  // 키보드 단축키
-  document.addEventListener('keydown', function(e) {
-    // Ctrl + D로 다크모드 토글
-    if (e.ctrlKey && e.key === 'd') {
-      e.preventDefault();
-      themeToggle.click();
-    }
-    
-    // Ctrl + R로 이름 재타이핑
-    if (e.ctrlKey && e.key === 'r') {
-      e.preventDefault();
-      typewriterEffect();
-    }
   });
 });
 
-// CSS 키프레임 애니메이션을 동적으로 추가
-const style = document.createElement('style');
-style.textContent = `
-  @keyframes bounce {
-    0%, 20%, 53%, 80%, 100% {
-      transform: translate3d(0,0,0);
-    }
-    40%, 43% {
-      transform: translate3d(0,-15px,0);
-    }
-    70% {
-      transform: translate3d(0,-7px,0);
-    }
-    90% {
-      transform: translate3d(0,-3px,0);
-    }
-  }
-`;
-document.head.appendChild(style);
