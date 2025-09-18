@@ -2,302 +2,150 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>Fashion Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+  <title>Portfolio</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    :root {
-      --primary-gold: #C8A882;
-      --accent-rose: #D4A5A5;
-      --deep-charcoal: #2C2C2C;
-      --soft-cream: #F8F6F1;
-      --pure-white: #FFFFFF;
-      --warm-gray: #8A8A8A;
-      --text-dark: #1A1A1A;
-      --shadow-light: 0 4px 20px rgba(200, 168, 130, 0.15);
-      --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.1);
-      --gradient-gold: linear-gradient(135deg, #C8A882, #E2C89C);
-      --gradient-rose: linear-gradient(135deg, #D4A5A5, #E8C4C4);
-    }
-    [data-theme="dark"] {
-      --soft-cream: #1A1A1A;
-      --pure-white: #2C2C2C;
-      --text-dark: #F8F6F1;
-      --warm-gray: #B8B8B8;
-      --shadow-light: 0 4px 20px rgba(200, 168, 130, 0.25);
-      --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.4);
-    }
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--soft-cream);
-      color: var(--text-dark);
-      line-height: 1.6;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .fashion-layout { min-height: 100vh; position: relative; }
-    .fashion-nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      padding: 20px 40px; background: rgba(248, 246, 241, 0.95);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(200, 168, 130, 0.2);
-      display: flex; justify-content: space-between; align-items: center;
-      transition: all 0.3s ease;
-    }
-    [data-theme="dark"] .fashion-nav {
-      background: rgba(26, 26, 26, 0.95);
-      border-bottom: 1px solid rgba(200, 168, 130, 0.3);
-    }
-    .nav-brand {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem; font-weight: 600;
-      background: var(--gradient-gold);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .theme-toggle {
-      background: var(--gradient-gold); border: none; border-radius: 50px;
-      width: 50px; height: 50px; font-size: 1.5rem; cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: var(--shadow-light);
-    }
-    .theme-toggle:hover {
-      transform: scale(1.1); box-shadow: var(--shadow-medium);
+      margin: 0;
+      font-family: 'Noto Sans KR', sans-serif;
+      background: #f9f6f1;
+      color: #333;
     }
 
-    /* 히어로 영역 */
-    .fashion-hero {
+    /* 헤더 */
+    header {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      padding: 160px 20px 80px;
-      background: var(--pure-white);
-      box-shadow: var(--shadow-light);
-      text-align: center;
-    }
-    .profile-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
-    .profile-image-container {
-      position: relative;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      overflow: hidden;
-      box-shadow: var(--shadow-medium);
-    }
-    .profile-image-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .profile-info { text-align: center; }
-    .fashion-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .fashion-role { color: var(--warm-gray); font-size: 1rem; }
-    .fashion-tags {
-      margin-top: 12px;
-      display: flex;
-      gap: 8px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .fashion-tags .tag {
-      background: var(--gradient-rose);
-      color: var(--pure-white);
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      box-shadow: var(--shadow-light);
+      padding: 15px 40px;
+      background: #f9f6f1;
+      border-bottom: 1px solid #e6e0d8;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    /* 메인 */
-    .fashion-main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 20px;
-      display: grid;
-      gap: 40px;
-    }
-    .fashion-card {
-      background: var(--pure-white);
-      border-radius: 16px;
-      padding: 30px;
-      box-shadow: var(--shadow-light);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .fashion-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-medium);
-    }
-    .card-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-    .card-header h2 {
-      font-family: 'Playfair Display', serif;
+    header h1 {
       font-size: 1.5rem;
-    }
-    .decorative-line {
-      flex-grow: 1;
-      height: 2px;
-      background: var(--gradient-gold);
-      border-radius: 2px;
+      color: #c7a27c;
+      margin: 0;
+      font-weight: 700;
     }
 
-    /* 푸터 */
-    .fashion-footer {
-      background: var(--deep-charcoal);
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-      margin-top: 60px;
-    }
-    .footer-content {
+    /* 다크모드 버튼 */
+    .dark-mode-toggle {
+      background: #c7a27c;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      font-size: 18px;
+      color: white;
       display: flex;
-      flex-direction: column;
-      gap: 10px;
-      font-size: 0.9rem;
+      justify-content: center;
+      align-items: center;
     }
-    .footer-social {
-      color: var(--accent-rose);
-      font-weight: 500;
+
+    /* 메인 프로필 */
+    .profile {
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 3px solid #eee;
+    }
+
+    .profile h2 {
+      font-size: 2.2rem;
+      margin: 10px 0 5px;
+      color: #c7a27c;
+    }
+
+    .profile p {
+      font-size: 1.1rem;
+      color: #666;
+    }
+
+    /* 태그 */
+    .tags {
+      margin-top: 20px;
+    }
+
+    .tags span {
+      display: inline-block;
+      margin: 6px;
+      padding: 8px 16px;
+      border: 1px solid #c7a27c;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      color: #5a4633;
+      background: #fff8f0;
+    }
+
+    /* About Me */
+    .about {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .about h3 {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+      border-left: 4px solid #c7a27c;
+      padding-left: 10px;
+    }
+
+    .about p {
+      line-height: 1.8;
+      color: #555;
     }
   </style>
 </head>
 <body>
-  <div class="fashion-layout">
-    <!-- 네비게이션 -->
-    <nav class="fashion-nav">
-      <div class="nav-brand">MyFashion</div>
-      <button id="themeToggle" class="theme-toggle">🌙</button>
-    </nav>
+  <!-- 헤더 -->
+  <header>
+    <h1>Portfolio</h1>
+    <button class="dark-mode-toggle">🌙</button>
+  </header>
 
-    <!-- 히어로 섹션 -->
-    <section class="fashion-hero">
-      <div class="hero-content">
-        <div class="profile-section">
-          <div class="profile-image-container">
-            <img id="profileImg" src="https://via.placeholder.com/200" alt="Profile">
-          </div>
-          <div class="profile-info">
-            <h1 id="nameTitle" class="fashion-name">Fashionista</h1>
-            <p class="fashion-role">Creative Director & Stylist</p>
-            <div class="fashion-tags">
-              <span class="tag">Luxury</span>
-              <span class="tag">Minimalism</span>
-              <span class="tag">Trendy</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  <!-- 프로필 -->
+  <section class="profile">
+    <img src="profile.jpg" alt="프로필 이미지">
+    <h2>송주영</h2>
+    <p>Fashion MD · Style Curator</p>
+    <div class="tags">
+      <span>#Fashion MD</span>
+      <span>#Retail MD</span>
+      <span>#Trend Expert</span>
+    </div>
+  </section>
 
-    <!-- 메인 섹션 -->
-    <main class="fashion-main">
-      <div class="fashion-card">
-        <div class="card-header">
-          <h2>About Me</h2>
-          <div class="decorative-line"></div>
-        </div>
-        <p id="aboutText" class="fashion-about">
-          Passionate about fashion and design, always seeking new inspiration to blend classic elegance with modern trends.
-        </p>
-      </div>
-    </main>
-
-    <!-- 푸터 -->
-    <footer class="fashion-footer">
-      <div class="footer-content">
-        <span>© 2025 Fashionista</span>
-        <span class="footer-social">Follow me on Instagram</span>
-      </div>
-    </footer>
-  </div>
+  <!-- About Me -->
+  <section class="about">
+    <h3>About Me</h3>
+    <p>
+      패션 이커머스 업계에서 5년간 MD로 활동하며 트렌드를 선도하는 브랜드 큐레이션과 상품 기획을 담당하고 있습니다.  
+      글로벌 패션 트렌드 분석부터 브랜드 파트너십까지, 패션의 모든 영역에서 창조적 솔루션을 제공합니다.
+    </p>
+  </section>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const themeToggle = document.getElementById('themeToggle');
-      const body = document.body;
-      let currentTheme = 'light';
-
-      themeToggle.addEventListener('click', function() {
-        if (currentTheme === 'light') {
-          body.setAttribute('data-theme', 'dark');
-          themeToggle.textContent = '☀️';
-          currentTheme = 'dark';
-        } else {
-          body.removeAttribute('data-theme');
-          themeToggle.textContent = '🌙';
-          currentTheme = 'light';
-        }
-      });
-
-      // bounce 효과
-      const profileImg = document.getElementById('profileImg');
-      profileImg.addEventListener('click', function() {
-        this.style.animation = 'bounce 0.6s ease-in-out';
-        setTimeout(() => { this.style.animation = ''; }, 600);
-      });
-
-      // 타이핑 효과
-      const nameTitle = document.getElementById('nameTitle');
-      const originalText = nameTitle.textContent;
-      function typewriterEffect() {
-        nameTitle.textContent = '';
-        let i = 0;
-        const typing = setInterval(() => {
-          if (i < originalText.length) {
-            nameTitle.textContent += originalText.charAt(i);
-            i++;
-          } else { clearInterval(typing); }
-        }, 150);
-      }
-      setTimeout(typewriterEffect, 500);
-
-      // About 더블클릭 수정
-      const aboutText = document.getElementById('aboutText');
-      const originalAboutText = aboutText.textContent;
-      aboutText.addEventListener('dblclick', function() {
-        const currentText = this.textContent;
-        this.innerHTML = `<textarea style="width: 100%; height: 100px; padding: 10px; border: 2px solid #C8A882; border-radius: 8px; font-family: inherit; font-size: inherit; resize: vertical;">${currentText}</textarea>`;
-        const textarea = this.querySelector('textarea');
-        textarea.focus();
-        textarea.addEventListener('blur', function() {
-          aboutText.textContent = this.value || originalAboutText;
-        });
-        textarea.addEventListener('keydown', function(e) {
-          if (e.key === 'Enter' && e.ctrlKey) { this.blur(); }
-        });
-      });
+    const toggleBtn = document.querySelector('.dark-mode-toggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
     });
-
-    // bounce 애니메이션 정의
-    const style = document.createElement('style');
-    style.textContent = `
-      @keyframes bounce {
-        0%, 20%, 53%, 80%, 100% { transform: translate3d(0,0,0); }
-        40%, 43% { transform: translate3d(0,-15px,0); }
-        70% { transform: translate3d(0,-7px,0); }
-        90% { transform: translate3d(0,-3px,0); }
-      }
-    `;
-    document.head.appendChild(style);
   </script>
 </body>
 </html>
+
 
