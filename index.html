@@ -9,7 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    /* ===== CSS 시작 ===== */
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
     * { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
@@ -69,7 +68,115 @@
     .theme-toggle:hover {
       transform: scale(1.1); box-shadow: var(--shadow-medium);
     }
-    /* ... (CSS 나머지 부분은 동일, 너무 길어 생략하지 않고 위에서 주신 코드 전체 삽입) ... */
+
+    /* 히어로 영역 */
+    .fashion-hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 160px 20px 80px;
+      background: var(--pure-white);
+      box-shadow: var(--shadow-light);
+      text-align: center;
+    }
+    .profile-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .profile-image-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: var(--shadow-medium);
+    }
+    .profile-image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .profile-info { text-align: center; }
+    .fashion-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .fashion-role { color: var(--warm-gray); font-size: 1rem; }
+    .fashion-tags {
+      margin-top: 12px;
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .fashion-tags .tag {
+      background: var(--gradient-rose);
+      color: var(--pure-white);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      box-shadow: var(--shadow-light);
+    }
+
+    /* 메인 */
+    .fashion-main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      display: grid;
+      gap: 40px;
+    }
+    .fashion-card {
+      background: var(--pure-white);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: var(--shadow-light);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .fashion-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-medium);
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .card-header h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+    }
+    .decorative-line {
+      flex-grow: 1;
+      height: 2px;
+      background: var(--gradient-gold);
+      border-radius: 2px;
+    }
+
+    /* 푸터 */
+    .fashion-footer {
+      background: var(--deep-charcoal);
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 0.9rem;
+    }
+    .footer-social {
+      color: var(--accent-rose);
+      font-weight: 500;
+    }
   </style>
 </head>
 <body>
@@ -86,7 +193,6 @@
         <div class="profile-section">
           <div class="profile-image-container">
             <img id="profileImg" src="https://via.placeholder.com/200" alt="Profile">
-            <div class="image-overlay"></div>
           </div>
           <div class="profile-info">
             <h1 id="nameTitle" class="fashion-name">Fashionista</h1>
@@ -112,7 +218,6 @@
           Passionate about fashion and design, always seeking new inspiration to blend classic elegance with modern trends.
         </p>
       </div>
-      <!-- 여기에 Expertise, Achievements, Contact 등 섹션 추가 가능 -->
     </main>
 
     <!-- 푸터 -->
@@ -125,7 +230,6 @@
   </div>
 
   <script>
-    // ===== JS 시작 =====
     document.addEventListener('DOMContentLoaded', function() {
       const themeToggle = document.getElementById('themeToggle');
       const body = document.body;
@@ -141,18 +245,16 @@
           themeToggle.textContent = '🌙';
           currentTheme = 'light';
         }
-        body.style.transform = 'scale(0.98)';
-        setTimeout(() => { body.style.transform = 'scale(1)'; }, 200);
       });
 
-      // 프로필 이미지 효과
+      // bounce 효과
       const profileImg = document.getElementById('profileImg');
       profileImg.addEventListener('click', function() {
         this.style.animation = 'bounce 0.6s ease-in-out';
         setTimeout(() => { this.style.animation = ''; }, 600);
       });
 
-      // 이름 타이핑 애니메이션
+      // 타이핑 효과
       const nameTitle = document.getElementById('nameTitle');
       const originalText = nameTitle.textContent;
       function typewriterEffect() {
@@ -167,7 +269,7 @@
       }
       setTimeout(typewriterEffect, 500);
 
-      // About 텍스트 편집 기능
+      // About 더블클릭 수정
       const aboutText = document.getElementById('aboutText');
       const originalAboutText = aboutText.textContent;
       aboutText.addEventListener('dblclick', function() {
@@ -184,7 +286,7 @@
       });
     });
 
-    // 키프레임 추가
+    // bounce 애니메이션 정의
     const style = document.createElement('style');
     style.textContent = `
       @keyframes bounce {
@@ -198,3 +300,4 @@
   </script>
 </body>
 </html>
+
